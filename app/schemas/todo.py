@@ -5,4 +5,7 @@ class TodoCreate(BaseModel):
 
 class Todo(TodoCreate):
     id: int
-    completed: bool = False
+    completed: bool
+
+    class Config:
+        from_attributes = True
